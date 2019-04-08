@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "810298835042",
+    "firebase_url": "https://chatter-d59dc.firebaseio.com",
+    "project_id": "chatter-d59dc",
+    "storage_bucket": "chatter-d59dc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:810298835042:android:463b4119c4fe406c",
+        "android_client_info": {
+          "package_name": "com.gardenvillagers.chitchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "810298835042-ghr09c14r2hhn0jnq8ogqisin80r6kj1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gardenvillagers.chitchat",
+            "certificate_hash": "7e2ef061ebddbb9ebc4910316fc7b86110ea02c5"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADLqeLOnInjdpvSkmMingusT5a9-OGDTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "810298835042-gs2lr2dracs1ecjnun5d659sng506ejc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
