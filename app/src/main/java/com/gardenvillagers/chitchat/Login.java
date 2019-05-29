@@ -2,12 +2,15 @@ package com.gardenvillagers.chitchat;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.net.Uri;
+import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -19,6 +22,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.gson.Gson;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
 public class Login extends AppCompatActivity {
     TextView registerUser;
@@ -27,6 +35,8 @@ public class Login extends AppCompatActivity {
     String userText, pass,email;
     ProgressDialog pd;
     ImageView  img;
+    UserDetails phoneUser;
+    SharedPreferences mPrefs;
 
     private FirebaseAuth mAuth;
 
@@ -35,10 +45,40 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
-        registerUser = (TextView)findViewById(R.id.register);
+        registerUser = (TextView)findViewById(R.id.updateInfo);
         username = (EditText)findViewById(R.id.username);
         password = (EditText)findViewById(R.id.password);
+        password.setOnEditorActionListener(new EditText.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    loginButton.performClick();
+                    return true;
+                }
+                return false;
+            }
+        });
         loginButton = (Button)findViewById(R.id.loginButton);
+
+        try {
+            String json = mPrefs.getString("phoneUser", "");
+
+            if (json.isEmpty()) {
+                phoneUser = new UserDetails();
+            } else {
+
+                phoneUser = new Gson().fromJson(json, UserDetails.class);
+
+                if (!phoneUser.getPhotoURL().equals("")) {
+                    loadImageFromStorage(phoneUser.getPhotoURL());
+                    img.setBackgroundResource(0);
+                    Toast.makeText(this, "INSIDE PHOTOURL", Toast.LENGTH_SHORT).show();
+                } else
+                    Toast.makeText(this, "NO PICTURE", Toast.LENGTH_SHORT).show();
+            }
+
+        }catch(Exception e){}
+
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -71,30 +111,25 @@ public class Login extends AppCompatActivity {
             }
         });
     }
+
+    private void loadImageFromStorage(String path)
+    {
+
+        try {
+            File f=new File(path, "profile.jpg");
+            Bitmap b = BitmapFactory.decodeStream(new FileInputStream(f));
+            img.setImageBitmap(b);
+        }
+        catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+
+    }
     void createAccount(){
         Intent i = new Intent(Login.this, CreateAccount.class);
         startActivity(i);
 
-        /*
-        email= username.getText().toString();
-        pass = password.getText().toString();
-        mAuth.createUserWithEmailAndPassword(email, pass)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            FirebaseUser user = mAuth.getCurrentUser();
-
-                            updateUI(user);
-                            startActivity(new Intent(Login.this, Users.class));
-
-                        } else {
-                            updateUI(null);
-                        }
-
-                        // ...
-                    }
-                });*/
     }
     void signIn(){
         email= username.getText().toString();

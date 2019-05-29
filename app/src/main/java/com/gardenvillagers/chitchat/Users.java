@@ -69,6 +69,7 @@ public class Users extends AppCompatActivity {
         });*/
     }
 
+    /*
     public void doOnSuccess(String s){
         try {
             JSONObject obj = new JSONObject(s);
@@ -101,5 +102,5 @@ public class Users extends AppCompatActivity {
         }
 
         pd.dismiss();
-    }
+    }*/
 }

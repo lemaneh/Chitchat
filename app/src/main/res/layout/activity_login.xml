@@ -118,16 +118,14 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/inf"
-        android:contentDescription="TODO"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/center40"
-
         app:layout_constraintEnd_toStartOf="@+id/mid75"
         app:layout_constraintStart_toStartOf="@+id/mid25"
         app:layout_constraintTop_toTopOf="@+id/center15" />
 
     <TextView
-        android:id="@+id/register"
+        android:id="@+id/updateInfo"
         android:layout_width="0sp"
         android:layout_height="0sp"
         android:gravity="center"
@@ -157,6 +155,7 @@
         android:layout_height="0dp"
         android:hint="enter password"
         android:inputType="textPassword"
+        android:imeOptions="actionDone"
         android:maxLines="1"
         app:layout_constraintBottom_toTopOf="@+id/center5"
         app:layout_constraintEnd_toStartOf="@+id/right"

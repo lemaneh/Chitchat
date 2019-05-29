@@ -141,21 +141,22 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent=".8" />
 
-    <ImageView
+    <com.github.abdularis.civ.CircleImageView
         android:id="@+id/gif1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/uploadimage"
-        android:contentDescription="TODO"
+        android:layout_width="0sp"
+        android:layout_height="0sp"
         android:visibility="visible"
+        android:src="@drawable/user_icon"
+        android:onClick="onCircleImageClick"
+        app:strokeWidth=".5sp"
+        app:strokeColor="@color/common_google_signin_btn_text_dark_disabled"
         app:layout_constraintBottom_toTopOf="@+id/center40"
-
         app:layout_constraintEnd_toStartOf="@+id/mid75"
         app:layout_constraintStart_toStartOf="@+id/mid25"
         app:layout_constraintTop_toTopOf="@+id/center15" />
 
     <TextView
-        android:id="@+id/register"
+        android:id="@+id/updateInfo"
         android:layout_width="0sp"
         android:layout_height="0sp"
         android:gravity="center"
@@ -174,7 +175,7 @@
         android:layout_width="0sp"
         android:layout_height="0sp"
         android:gravity="center"
-        android:text="Upload an image"
+        android:text="^ Upload an image ^"
         android:textColor="@color/common_google_signin_btn_text_light_default"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/center6"
@@ -187,7 +188,7 @@
         android:id="@+id/username"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:hint="enter username"
+        android:hint="enter your email"
         android:inputType="text"
         android:maxLines="1"
         app:layout_constraintBottom_toTopOf="@+id/center3"
@@ -220,11 +221,10 @@
         app:layout_constraintTop_toTopOf="@+id/center4" />
 
     <Button
-        android:id="@+id/loginButton"
+        android:id="@+id/createAccountButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="Login"
-        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/bottom3"
         app:layout_constraintEnd_toStartOf="@+id/right"
         app:layout_constraintStart_toStartOf="@+id/left"

@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         else {
             Toast.makeText(this,"Hello "+ thisUser.getEmail(),
                     Toast.LENGTH_LONG).show();
-            Intent i = new Intent(MainActivity.this, DisplayUser.class);
+            Intent i = new Intent(MainActivity.this, DisplayCost.class);
             startActivity(i);
         }
 

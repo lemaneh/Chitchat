@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".075" />
+        app:layout_constraintGuide_percent=".0725" />
 
     <android.support.constraint.Guideline
         android:id="@+id/top2"
@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".35" />
+        app:layout_constraintGuide_percent=".275" />
 
     <android.support.constraint.Guideline
         android:id="@+id/center50"
@@ -48,21 +48,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".375" />
+        app:layout_constraintGuide_percent=".3" />
 
     <android.support.constraint.Guideline
         android:id="@+id/center6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".45" />
+        app:layout_constraintGuide_percent=".35" />
 
     <android.support.constraint.Guideline
         android:id="@+id/center7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".475" />
+        app:layout_constraintGuide_percent=".375" />
 
     <android.support.constraint.Guideline
         android:id="@+id/center3"
@@ -83,7 +83,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".75" />
+        app:layout_constraintGuide_percent=".7" />
 
     <android.support.constraint.Guideline
         android:id="@+id/center15"
@@ -91,6 +91,27 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent=".1" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/center8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".15" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/center9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".225" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/center10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".2" />
 
     <android.support.constraint.Guideline
         android:id="@+id/left"
@@ -125,7 +146,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/mid4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintGuide_percent=".45" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/mid3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".35" />
 
     <android.support.constraint.Guideline
         android:id="@+id/right"
@@ -146,10 +181,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".9" />
+        app:layout_constraintGuide_percent=".925" />
 
     <android.support.constraint.Guideline
         android:id="@+id/bottom3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".9" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/bottom8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -160,122 +202,159 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".775" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/bottom5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".825" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/bottom6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".825" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/bottom7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintGuide_percent=".8" />
 
     <com.github.abdularis.civ.CircleImageView
         android:id="@+id/gif1"
         android:layout_width="0sp"
         android:layout_height="0sp"
-        android:visibility="visible"
-        android:src="@drawable/user_icon"
         android:onClick="onCircleImageClick"
-        app:strokeWidth="3sp"
-        app:strokeColor="@color/common_google_signin_btn_text_dark_disabled"
-        app:layout_constraintBottom_toTopOf="@+id/center40"
+        android:src="@drawable/user_icon"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/center15"
         app:layout_constraintEnd_toStartOf="@+id/mid75"
         app:layout_constraintStart_toStartOf="@+id/mid25"
-        app:layout_constraintTop_toTopOf="@+id/center15" />
+        app:layout_constraintTop_toTopOf="@+id/center15"
+        app:strokeColor="@color/common_google_signin_btn_text_dark_disabled"
+        app:strokeWidth="3sp" />
 
-    <TextView
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/center4"
+        app:layout_constraintEnd_toStartOf="@+id/right"
+        app:layout_constraintStart_toStartOf="@+id/left"
+        app:layout_constraintTop_toTopOf="@+id/center9">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+    <com.autofit.et.lib.AutoFitEditText
         android:id="@+id/updateInfo"
         android:layout_width="0sp"
         android:layout_height="0sp"
+        android:padding="10sp"
+        android:textSize="86sp"
+        android:background="@color/colorPrimary"
         android:gravity="center"
-        android:text="Create an Account"
-        android:textSize="20dp"
-        android:background="@color/colorAccent"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Update Information"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
         app:layout_constraintBottom_toTopOf="@+id/bottom"
         app:layout_constraintEnd_toStartOf="@+id/right"
         app:layout_constraintStart_toStartOf="@+id/left"
-        app:layout_constraintTop_toTopOf="@+id/bottom2"
+        app:layout_constraintTop_toTopOf="@+id/bottom3"
         app:layout_constraintVertical_bias="0.75" />
 
-    <TextView
-        android:id="@+id/uploadimagetext"
-        android:layout_width="0sp"
-        android:layout_height="0sp"
-        android:gravity="center"
-        android:text="Upload an image"
-        android:visibility="invisible"
-        android:textColor="@color/common_google_signin_btn_text_light_default"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/center6"
-        app:layout_constraintEnd_toStartOf="@+id/right"
-        app:layout_constraintStart_toStartOf="@+id/left"
-        app:layout_constraintTop_toTopOf="@+id/center2"
-        app:layout_constraintVertical_bias="0.75" />
-
-    <TextView
-        android:id="@+id/username"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:hint="enter username"
-
-        android:inputType="text"
-        android:maxLines="1"
-        app:layout_constraintBottom_toTopOf="@+id/center3"
-        app:layout_constraintEnd_toStartOf="@+id/right"
-        app:layout_constraintStart_toStartOf="@+id/left"
-        app:layout_constraintTop_toTopOf="@+id/center" />
-
-    <TextView
-        android:id="@+id/nickname"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:hint="enter your nickname"
-        android:inputType="text"
-        android:maxLines="1"
-        app:layout_constraintBottom_toTopOf="@+id/center50"
-        app:layout_constraintEnd_toStartOf="@+id/right"
-        app:layout_constraintStart_toStartOf="@+id/left"
-        app:layout_constraintTop_toTopOf="@+id/center7" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:hint="enter password"
-        android:inputType="textPassword"
-        android:visibility="invisible"
-        android:maxLines="1"
-        app:layout_constraintBottom_toTopOf="@+id/center5"
-        app:layout_constraintEnd_toStartOf="@+id/right"
-        app:layout_constraintStart_toStartOf="@+id/left"
-        app:layout_constraintTop_toTopOf="@+id/center4" />
-
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="Go to "
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/bottom3"
-        app:layout_constraintEnd_toStartOf="@+id/right"
-        app:layout_constraintStart_toStartOf="@+id/left"
-        app:layout_constraintTop_toTopOf="@+id/bottom4" />
-
-    <me.grantland.widget.AutofitTextView
+    <com.autofit.et.lib.AutoFitEditText
         android:id="@+id/logout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="Log Out"
         android:gravity="center"
+        android:padding="5sp"
+        android:text="Log Out"
         android:textColor="@color/Red"
+        android:textSize="86sp"
         app:layout_constraintBottom_toTopOf="@+id/top"
         app:layout_constraintEnd_toStartOf="@+id/right"
         app:layout_constraintStart_toStartOf="@+id/mid"
         app:layout_constraintTop_toTopOf="@+id/top2" />
 
-    <me.grantland.widget.AutofitTextView
+    <com.autofit.et.lib.AutoFitEditText
         android:id="@+id/accountText"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="left |center_vertical"
+        android:gravity="center"
+        android:padding="5sp"
         android:text="Account"
         android:textColor="@color/Red"
+        android:textSize="86sp"
         app:layout_constraintBottom_toTopOf="@+id/top"
-        app:layout_constraintEnd_toStartOf="@+id/mid2"
+        app:layout_constraintEnd_toStartOf="@+id/mid4"
         app:layout_constraintStart_toStartOf="@+id/left"
         app:layout_constraintTop_toTopOf="@+id/top2" />
+
+    <com.autofit.et.lib.AutoFitEditText
+        android:id="@+id/editAmount"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:hint="Enter Amount"
+        android:inputType="textPersonName"
+        android:isScrollContainer="false"
+        android:maxLength="20"
+        android:padding="5sp"
+        android:textAlignment="center"
+        android:textSize="86sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom8"
+        app:layout_constraintEnd_toStartOf="@+id/right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/left"
+        app:layout_constraintTop_toTopOf="@+id/bottom7"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.autofit.et.lib.AutoFitEditText
+        android:id="@+id/editNote"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:hint="Enter Note"
+        android:inputType="textPersonName"
+        android:isScrollContainer="false"
+        android:maxLength="20"
+        android:padding="5sp"
+        android:textAlignment="center"
+        android:textSize="86sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom4"
+        app:layout_constraintEnd_toStartOf="@+id/right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/left"
+        app:layout_constraintTop_toBottomOf="@+id/center5"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.autofit.et.lib.AutoFitEditText
+        android:id="@+id/amountMoney"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="10sp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:textSize="86sp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+
+        android:text="$--.-"
+        app:layout_constraintBottom_toTopOf="@+id/center10"
+        app:layout_constraintEnd_toStartOf="@+id/mid75"
+        app:layout_constraintStart_toStartOf="@+id/mid25"
+        app:layout_constraintTop_toTopOf="@+id/center15" />
 </android.support.constraint.ConstraintLayout>
