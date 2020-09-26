@@ -72,7 +72,7 @@ public class Login extends AppCompatActivity {
                 if (!phoneUser.getPhotoURL().equals("")) {
                     loadImageFromStorage(phoneUser.getPhotoURL());
                     img.setBackgroundResource(0);
-                    Toast.makeText(this, "INSIDE PHOTOURL", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "INSIDE PHOTO URL", Toast.LENGTH_SHORT).show();
                 } else
                     Toast.makeText(this, "NO PICTURE", Toast.LENGTH_SHORT).show();
             }
